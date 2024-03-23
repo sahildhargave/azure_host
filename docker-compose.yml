@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  outyet:
+    image: outyet
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    entrypoint: ./app -version=1.11
+    ports:
+      - 8080:8080
